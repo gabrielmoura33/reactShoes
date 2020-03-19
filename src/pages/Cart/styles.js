@@ -2,7 +2,7 @@ import styled from 'styled-components/native';
 import colors from '../../styles/global';
 
 export const Container = styled.View`
-  padding: 10px;
+  padding: 15px;
   background: #fff;
   border-radius: 4px;
   margin: 15px;
@@ -52,7 +52,8 @@ export const ProductControls = styled.View`
 export const ProductControlButton = styled.TouchableOpacity``;
 
 export const ProductAmount = styled.TextInput.attrs({
-  readonly: false,
+  editable: false,
+  selectTextOnFocus: false,
 })`
   background: #fff;
   padding: 5px;

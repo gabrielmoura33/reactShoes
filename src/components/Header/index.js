@@ -1,9 +1,10 @@
+/* eslint-disable react/prop-types */
 import React from 'react';
-import Icon from 'react-native-vector-icons/MaterialIcons';
 import { TouchableOpacity } from 'react-native';
+import { connect } from 'react-redux';
 import { Wrapper, Container, Logo, CartButton, Quantity } from './styles';
 
-function Header({ navigation }) {
+function Header({ navigation, cartSize }) {
   return (
     <Wrapper>
       <Container>
@@ -11,10 +12,12 @@ function Header({ navigation }) {
           <Logo />
         </TouchableOpacity>
         <CartButton onPress={() => navigation.navigate('Cart')}>
-          <Quantity>1</Quantity>
+          <Quantity>{cartSize}</Quantity>
         </CartButton>
       </Container>
     </Wrapper>
   );
 }
-export default Header;
+export default connect(state => ({
+  cartSize: state.cart.length,
+}))(Header);

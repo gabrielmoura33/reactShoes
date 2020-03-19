@@ -22,12 +22,12 @@ export const Logo = styled.Image.attrs({ source: logo })`
 `;
 
 export const CartButton = styled(RectButton)`
-  width: 30px;
-  height: 30px;
+  width: 50px;
+  height: 50px;
   justify-content: center;
   align-items: center;
   background: #7159c1;
-  border-radius: 15px;
+  border-radius: 25px;
   margin-left: 10px;
   padding: 0 12px;
 `;
